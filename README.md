@@ -8,7 +8,7 @@
 **Hourly updated, firewall-ready IP blocklist aggregated from 18+ threat intelligence sources. ~120,000+ unique malicious IPs, deduplicated, validated, and ready to import.**
 
 ```
-https://github.com/p3nr0s3/threat-intel-ip-feeds/blob/main/output/hourlyIPv4.txt
+https://raw.githubusercontent.com/p3nr0s3/threat-intel-ip-feeds/main/output/hourlyIPv4.txt
 ```
 Copy the URL above into your firewall, SIEM, or any tool that accepts a plain-text IP blocklist. One IP/CIDR per line, no comments, no headers. Updated every hour.
 
@@ -32,7 +32,7 @@ Navigate to **Security Fabric > External Connectors > Create New > Threat Feeds 
 | Field | Value |
 |-------|-------|
 | **Name** | `ThreatIntel-IPFeed` |
-| **URL** | `https://github.com/p3nr0s3/threat-intel-ip-feeds/blob/main/output/hourlyIPv4.txt` |
+| **URL** | `https://raw.githubusercontent.com/p3nr0s3/threat-intel-ip-feeds/main/output/hourlyIPv4.txt` |
 | **Refresh Rate** | `60` minutes |
 | **Status** | Enabled |
 
@@ -77,7 +77,7 @@ Create a second policy to block **internal hosts communicating with known malici
 config system external-resource
     edit "ThreatIntel-IPFeed"
         set type address
-        set resource "https://github.com/p3nr0s3/threat-intel-ip-feeds/blob/main/output/hourlyIPv4.txt"
+        set resource "https://raw.githubusercontent.com/p3nr0s3/threat-intel-ip-feeds/main/output/hourlyIPv4.txt"
         set refresh-rate 60
     next
 end
@@ -117,7 +117,7 @@ Navigate to **Objects > External Dynamic Lists > Add**
 |-------|-------|
 | **Name** | `ThreatIntel-IPFeed` |
 | **Type** | `IP List` |
-| **Source** | `https://github.com/p3nr0s3/threat-intel-ip-feeds/blob/main/output/hourlyIPv4.txt` |
+| **Source** | `https://raw.githubusercontent.com/p3nr0s3/threat-intel-ip-feeds/main/output/hourlyIPv4.txt` |
 | **Repeat** | `Hourly` |
 
 Click **OK** to save.
@@ -162,7 +162,7 @@ Click **Commit** to apply changes. Verify the EDL is loaded under **Objects > Ex
 <summary><b>Palo Alto CLI alternative</b></summary>
 
 ```
-set address ThreatIntel-IPFeed external-dynamic-list url "https://github.com/p3nr0s3/threat-intel-ip-feeds/blob/main/output/hourlyIPv4.txt"
+set address ThreatIntel-IPFeed external-dynamic-list url "https://raw.githubusercontent.com/p3nr0s3/threat-intel-ip-feeds/main/output/hourlyIPv4.txt"
 set address ThreatIntel-IPFeed external-dynamic-list type ip
 set address ThreatIntel-IPFeed external-dynamic-list repeat hourly
 ```
@@ -171,13 +171,13 @@ set address ThreatIntel-IPFeed external-dynamic-list repeat hourly
 
 ### iptables
 ```bash
-curl -s https://github.com/p3nr0s3/threat-intel-ip-feeds/blob/main/output/hourlyIPv4.txt \
+curl -s https://raw.githubusercontent.com/p3nr0s3/threat-intel-ip-feeds/main/output/hourlyIPv4.txt \
   | while read ip; do iptables -A INPUT -s "$ip" -j DROP; done
 ```
 
 ### nftables
 ```bash
-curl -s https://github.com/p3nr0s3/threat-intel-ip-feeds/blob/main/output/hourlyIPv4.txt \
+curl -s https://raw.githubusercontent.com/p3nr0s3/threat-intel-ip-feeds/main/output/hourlyIPv4.txt \
   | nft add element inet filter blocklist
 ```
 
@@ -193,7 +193,7 @@ findtime = 3600
 ### Suricata / Snort
 Generate rules from the feed:
 ```bash
-curl -s https://github.com/p3nr0s3/threat-intel-ip-feeds/blob/main/output/hourlyIPv4.txt \
+curl -s https://raw.githubusercontent.com/p3nr0s3/threat-intel-ip-feeds/main/output/hourlyIPv4.txt \
   | awk '{print "drop ip "$1" any -> any any (msg:\"ThreatIntel Block\"; sid:9000001; rev:1;)"}' \
   > /etc/suricata/rules/threat-intel.rules
 ```
@@ -215,7 +215,7 @@ print(f"{len(bundle['objects']) - 1} indicators loaded")
 ```python
 import requests
 blocklist = requests.get(
-    "https://github.com/p3nr0s3/threat-intel-ip-feeds/blob/main/output/hourlyIPv4.txt"
+    "https://raw.githubusercontent.com/p3nr0s3/threat-intel-ip-feeds/main/output/hourlyIPv4.txt"
 ).text.strip().split("\n")
 print(f"{len(blocklist)} IPs loaded")
 ```
