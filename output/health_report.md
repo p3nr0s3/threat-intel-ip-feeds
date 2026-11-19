@@ -1,7 +1,7 @@
 # IP Blacklist Aggregator - Health Report
 
-**Date:** 2026-11-19T03:31:53.968371+00:00
-**Duration:** 7.51s
+**Date:** 2026-11-19T13:12:55.839279+00:00
+**Duration:** 8.27s
 **Successful:** 17/19
 **Fresh Fetches:** 17
 **Sources Using Cache:** 0
@@ -14,32 +14,32 @@ No source used cached data in this run.
 
 | Metric | Value |
 |--------|-------|
-| Unique to single source | 50,654 |
-| Found in multiple sources | 45,043 |
-| Max source overlap | 8 |
-| Avg sources per IP | 1.84 |
+| Unique to single source | 54,186 |
+| Found in multiple sources | 44,448 |
+| Max source overlap | 7 |
+| Avg sources per IP | 1.78 |
 
 ### Per-Source Contribution
 
 | Source | Unique | Shared | Unique % |
 |--------|--------|--------|----------|
-| RTBH (Turkiye) | 23,475 | 21,150 | 52.6% |
-| Stamparm IPsum | 11,444 | 28,478 | 28.7% |
-| SGB (Turkiye) | 9,723 | 277 | 97.2% |
-| CINS Army | 3,477 | 11,523 | 23.2% |
+| RTBH (Turkiye) | 24,506 | 20,735 | 54.2% |
+| Stamparm IPsum | 12,418 | 27,504 | 31.1% |
+| SGB (Turkiye) | 9,722 | 278 | 97.2% |
+| CINS Army | 4,911 | 10,089 | 32.7% |
 | Spamhaus DROP | 1,746 | 0 | 100.0% |
-| Tor Exit Nodes | 359 | 938 | 27.7% |
-| GreenSnow | 212 | 1,984 | 9.7% |
+| Tor Exit Nodes | 362 | 937 | 27.9% |
+| GreenSnow | 302 | 1,504 | 16.7% |
 | Spamhaus DROPv6 | 90 | 0 | 100.0% |
-| BinaryDefense | 73 | 648 | 10.1% |
-| Blocklist.de (all) | 32 | 25,472 | 0.1% |
+| BinaryDefense | 72 | 649 | 10.0% |
+| Blocklist.de (all) | 35 | 25,346 | 0.1% |
 | Emerging Threats | 11 | 577 | 1.9% |
 | Blocklist.de (strongips) | 8 | 278 | 2.8% |
-| Blocklist.de (ssh) | 4 | 5,838 | 0.1% |
-| Blocklist.de (mail) | 0 | 13,792 | 0.0% |
-| Blocklist.de (apache) | 0 | 10,070 | 0.0% |
-| Blocklist.de (bots) | 0 | 3,323 | 0.0% |
-| Blocklist.de (bruteforcelogin) | 0 | 777 | 0.0% |
+| Blocklist.de (mail) | 3 | 13,601 | 0.0% |
+| Blocklist.de (ssh) | 0 | 5,689 | 0.0% |
+| Blocklist.de (apache) | 0 | 10,152 | 0.0% |
+| Blocklist.de (bots) | 0 | 3,172 | 0.0% |
+| Blocklist.de (bruteforcelogin) | 0 | 778 | 0.0% |
 | AbuseIPDB | 0 | 0 | N/A |
 | AlienVault OTX | 0 | 0 | N/A |
 
@@ -47,39 +47,39 @@ No source used cached data in this run.
 
 | Pair | Shared IPs |
 |------|-----------|
-| Stamparm IPsum & RTBH (Turkiye) | 17,043 |
-| Blocklist.de (all) & Blocklist.de (mail) | 13,787 |
-| CINS Army & Stamparm IPsum | 11,229 |
-| Blocklist.de (all) & RTBH (Turkiye) | 10,711 |
-| Blocklist.de (all) & Blocklist.de (apache) | 10,070 |
-| Blocklist.de (all) & Stamparm IPsum | 9,725 |
+| Stamparm IPsum & RTBH (Turkiye) | 17,204 |
+| Blocklist.de (all) & Blocklist.de (mail) | 13,595 |
+| Blocklist.de (all) & Blocklist.de (apache) | 10,152 |
+| Blocklist.de (all) & RTBH (Turkiye) | 9,688 |
+| CINS Army & Stamparm IPsum | 9,684 |
+| Blocklist.de (all) & Stamparm IPsum | 9,193 |
 | Blocklist.de (mail) & Blocklist.de (apache) | 7,711 |
-| Blocklist.de (all) & Blocklist.de (ssh) | 5,836 |
-| Blocklist.de (ssh) & Stamparm IPsum | 5,253 |
-| Blocklist.de (ssh) & RTBH (Turkiye) | 4,380 |
+| Blocklist.de (all) & Blocklist.de (ssh) | 5,689 |
+| Blocklist.de (ssh) & Stamparm IPsum | 5,008 |
+| Blocklist.de (ssh) & RTBH (Turkiye) | 4,091 |
 
 ## All Sources
 
 | Source | IPs | Status | Fetch Duration | Details |
 |--------|-----|--------|----------------|---------|
-| RTBH (Turkiye) | 44,625 | OK | 1.96s | Fresh fetch |
-| Stamparm IPsum | 39,922 | OK | 1.50s | Fresh fetch |
-| Blocklist.de (all) | 25,504 | OK | 1.34s | Fresh fetch |
-| CINS Army | 15,000 | OK | 0.91s | Fresh fetch |
-| Blocklist.de (mail) | 13,792 | OK | 0.88s | Fresh fetch |
-| Blocklist.de (apache) | 10,070 | OK | 0.94s | Fresh fetch |
-| SGB (Turkiye) | 10,000 | OK | 5.42s | Fresh fetch |
-| Blocklist.de (ssh) | 5,842 | OK | 0.83s | Fresh fetch |
-| Blocklist.de (bots) | 3,323 | OK | 0.57s | Fresh fetch |
-| GreenSnow | 2,196 | OK | 0.73s | Fresh fetch |
-| Spamhaus DROP | 1,746 | OK | 0.09s | Fresh fetch |
-| Tor Exit Nodes | 1,297 | OK | 0.67s | Fresh fetch |
-| Blocklist.de (bruteforcelogin) | 777 | OK | 0.35s | Fresh fetch |
-| BinaryDefense | 721 | OK | 0.82s | Fresh fetch |
-| Emerging Threats | 588 | OK | 0.27s | Fresh fetch |
-| Blocklist.de (strongips) | 286 | OK | 0.43s | Fresh fetch |
-| Spamhaus DROPv6 | 90 | OK | 0.06s | Fresh fetch |
+| RTBH (Turkiye) | 45,241 | OK | 1.60s | Fresh fetch |
+| Stamparm IPsum | 39,922 | OK | 0.71s | Fresh fetch |
+| Blocklist.de (all) | 25,381 | OK | 0.88s | Fresh fetch |
+| CINS Army | 15,000 | OK | 0.60s | Fresh fetch |
+| Blocklist.de (mail) | 13,604 | OK | 0.88s | Fresh fetch |
+| Blocklist.de (apache) | 10,152 | OK | 0.77s | Fresh fetch |
+| SGB (Turkiye) | 10,000 | OK | 6.58s | Fresh fetch |
+| Blocklist.de (ssh) | 5,689 | OK | 0.54s | Fresh fetch |
+| Blocklist.de (bots) | 3,172 | OK | 0.60s | Fresh fetch |
+| GreenSnow | 1,806 | OK | 0.61s | Fresh fetch |
+| Spamhaus DROP | 1,746 | OK | 0.19s | Fresh fetch |
+| Tor Exit Nodes | 1,299 | OK | 0.74s | Fresh fetch |
+| Blocklist.de (bruteforcelogin) | 778 | OK | 0.42s | Fresh fetch |
+| BinaryDefense | 721 | OK | 0.56s | Fresh fetch |
+| Emerging Threats | 588 | OK | 0.34s | Fresh fetch |
+| Blocklist.de (strongips) | 286 | OK | 0.29s | Fresh fetch |
+| Spamhaus DROPv6 | 90 | OK | 0.19s | Fresh fetch |
 | AbuseIPDB | 0 | SKIPPED | 0.00s | API credentials not configured; fetch skipped |
-| AlienVault OTX | 0 | SKIPPED | 0.00s | API credentials not configured; fetch skipped |
+| AlienVault OTX | 0 | SKIPPED | 0.02s | API credentials not configured; fetch skipped |
 
 ## All sources healthy.
